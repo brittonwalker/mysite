@@ -1,0 +1,177 @@
+@import "animate";
+@import "_mixins";
+@import "_forms";
+
+html{
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Reader";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/Reader-Regular.otf");
+}
+@font-face {
+  font-family: "Ak";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/AkzidGroStdMed.otf");
+}
+body{
+  background-color: #F9F0EA;
+  color: #111111;
+  font-family: Reader;
+}
+
+h1{
+  font-size: 50px;
+  width: 80%;
+}
+
+ul li{
+  display: inline-block;
+  font-size: 30px;
+}
+
+li{
+  margin-left: 25px;
+}
+
+nav{
+  width: 100%;
+  background-color: black;
+  padding: 40px 0;
+  position: fixed;
+}
+
+ul{
+  list-style: none;
+  float: right;
+  margin: 18px 50px 0 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:link, a:hover, a:visited{
+  color: #F9F0EA;
+}
+a:hover{
+  color: #ff584c;
+}
+
+.about{
+}
+.work{
+  // width: 100%;
+  // height: 100%;
+  background-color: black;
+}
+.work-images{
+  // width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-container{
+  position: relative;
+  width: 20%;
+}
+.image-container:hover .overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.5s;
+}
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.5s;
+}
+.image-container:hover .name {
+  display: block;
+  transition: all 0.5s;
+}
+
+.image-container.open{
+  .triangle{
+    display: block;
+  }
+  .overlay{
+    display: block;
+    transition: all 1s;
+    opacity: 0;
+  }
+  .name{
+    transition: all 1s;
+    opacity: 0;
+  }
+  &:hover{
+    .name{
+      // display: none;
+    }
+  }
+}
+
+.name{
+  display: none;
+  @include absCenter;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5em;
+  color: #ff584c;
+}
+
+.image-container img{
+  width: 100%;
+}
+.show .image-container{
+  width: calc(50% - 45px);
+  width: 46.6%;
+  display: inline-block;
+  vertical-align: top;
+}
+.browser{
+}
+
+.show{
+  padding: 0 50px;
+  display: none;
+  justify-content: space-between;
+}
+
+.show.open{
+  display: flex;
+}
+
+.text{
+  color: white;
+  display: inline-block;
+  height: 400px;
+  width: 46.6%;
+}
+.position{
+  font-size: .8em;
+  margin-top: 20px;
+  display: block;
+}
+
+.triangle{
+  display: none;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid black;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

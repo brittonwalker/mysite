@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Work</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="about">
+        <div>
+            <h1>Hi, my name is Britton Walker</h1>
+            <h1>I am a Web Developer and this is my site :)</h1>
+            <img src="./images/bface.png" alt="">
+        </div>
+    </section>
+    <section class="work">
+        <div class="work-images">
+            <div class="image-container" id="rdcaal">
+                <div class="overlay"><div class="name animated fadeIn">Rafael de Cárdenas / Architecture at Large<span class="position">Developer</span></div></div>
+                <div class="triangle"></div>
+                <img src="./images/rdcaal.jpg" alt="" />
+            </div>
+            <div class="image-container" id="mkca">
+                <div class="overlay"><div class="name animated fadeIn">Michael K Chen Architecture<span class="position">Developer</span></div></div>
+                <div class="triangle"></div>
+                <img src="./images/mkca.png" alt="">
+            </div>
+            <div class="image-container" id="softcity">
+                <div class="overlay"><div class="name animated fadeIn">Soft City Printing<span class="position">Developer</span></div></div>
+                <div class="triangle"></div>
+                <img src="./images/softcity.jpg" alt="">
+            </div>
+            <div class="image-container" id="fouo">
+                <div class="overlay"><div class="name animated fadeIn">For Office Use Only<span class="position">Developer</span></div></div>
+                <div class="triangle"></div>
+                <img src="./images/fouologo.jpg" alt="">
+            </div>
+        </div>
+        <div class="rdcaal">
+            <div class="show open">
+                <div class="image-container animated fadeInLeft">
+                    <img src="./images/rdcaal-work.jpg" alt="" class="browser">
+                </div>
+                <div class="text animated fadeInRight">
+                    <h2>Project: RAFAEL DE CÁRDENAS / ARCHITECTURE AT LARGE</h2>
+                    <br>
+                    <p>Rafael de Cárdenas / Architecture at Large is a seasoned resource for design vision and execution with wide-ranging projects in architecture, residential and commercial interiors, temporary spaces, furniture, and integrated objects.</p>
+                    <br>
+                    <p>This is the first project I contributed to since graduating from General Assembly and working with For Office Use Only. This is a Wordpress site using PHP, HTML, CSS, SASS, JQuery and various plugins.</p>
+                </div>
+            </div>
+        </div>
+        <div class="mkca">
+            <div class="show">
+                <div class="image-container animated fadeInLeft">
+                    <img src="./images/mkca-homepage.jpg" alt="" class="browser">
+                </div>
+                <div class="text animated fadeInRight">
+                    <h2>Project: Michael K Chen Architecture</h2>
+                    <br>
+                    <p>MKCA is an architecture practice providing innovative and superbly crafted work for clients seeking thoughtful and well-considered design.</p>
+                    <br>
+                    <p>This is the first project I contributed to since graduating from General Assembly and working with For Office Use Only. This is a Wordpress site using PHP, HTML, CSS, SASS, JQuery and various plugins.</p>
+                </div>
+            </div>
+        </div>
+        <div class="softcity">
+            <div class="show">
+                <div class="image-container animated fadeInLeft">
+                    <img src="./images/softcity-projects.jpg" alt="" class="browser">
+                </div>
+                <div class="text animated fadeInRight">
+                    <h2>Project: Soft City Printing</h2>
+                    <br>
+                    <p>Rafael de Cárdenas / Architecture at Large is a seasoned resource for design vision and execution with wide-ranging projects in architecture, residential and commercial interiors, temporary spaces, furniture, and integrated objects.</p>
+                    <br>
+                    <p>This is the first project I contributed to since graduating from General Assembly and working with For Office Use Only. This is a Wordpress site using PHP, HTML, CSS, SASS, JQuery and various plugins.</p>
+                </div>
+            </div>
+        </div>
+        <div class="fouo">
+            <div class="show">
+                <div class="image-container animated fadeInLeft">
+                    <img src="./images/fouo-design.jpg" alt="" class="browser">
+                </div>
+                <div class="text animated fadeInRight">
+                    <h2>For Office Use Only - Design Presentations</h2>
+                    <br>
+                    <p>Rafael de Cárdenas / Architecture at Large is a seasoned resource for design vision and execution with wide-ranging projects in architecture, residential and commercial interiors, temporary spaces, furniture, and integrated objects.</p>
+                    <br>
+                    <p>This is the first project I contributed to since graduating from General Assembly and working with For Office Use Only. This is a Wordpress site using PHP, HTML, CSS, SASS, JQuery and various plugins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+      <div id="form-messages"></div>
+      <form id="ajax-contact" method="post" action="form.php">
+        <div class="field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="field">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <div class="field">
+            <button type="submit">Send</button>
+        </div>
+      </form>
+    </section>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</html>
